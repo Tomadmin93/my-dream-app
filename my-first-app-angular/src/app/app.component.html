@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <!--      <app-servers></app-servers>-->
+      <button
+        (click)="onDisplayDetails()"
+      >Display Details
+      </button>
+      <p *ngIf="showSecret">Secret Password = tuna</p>
+      <div
+        [ngStyle]="{backgroundColor: i > 3 ? 'blue' : 'transparent'}"
+        [ngClass]="{'white-text':i>3}"
+        *ngFor="let log of this.logs; let i = index"
+      >{{log}}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--<label>Username</label>-->
+<!--<input type="text" class="form-control" [(ngModel)]="username">-->
+<!--<p>{{username}}</p>-->
+<!--<button-->
+<!--  class="btn btn-primary"-->
+<!--  [disabled]="username === ''"-->
+<!--  (click)="onResetUsername()"-->
+<!--&gt;Reset Username-->
+<!--</button>-->
